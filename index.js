@@ -38,10 +38,11 @@ function sendMessage(internationalDay) {
     const channel = client.channels.cache.get(process.env.CHANNEL_ID);
 
     if (internationalDay.length > 0) {
-        channel.send("Voici les journées internationales d'aujourd'hui : ").catch(e => console.log(e));
+        channel.send("<@&"+process.env.ROLE_ID+"> Voici les journées internationales d'aujourd'hui : ").catch(e => console.log(e));
         internationalDay.forEach(element => {
             channel.send(element.type+ " "+ element.url).catch(e => console.log(e));
         });
+
     } else {
         channel.send("Aucun événement international n'est prévu aujourd'hui.").catch(e => console.log(e));
     }
