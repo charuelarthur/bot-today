@@ -42,7 +42,6 @@ function sendMessage(internationalDay) {
         internationalDay.forEach(element => {
             channel.send(element.type+ " "+ element.url).catch(e => console.log(e));
         });
-
     } else {
         channel.send("Aucun événement international n'est prévu aujourd'hui.").catch(e => console.log(e));
     }
