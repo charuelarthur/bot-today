@@ -6,6 +6,8 @@ const cron = require('node-cron');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
+const worldleURL = 'https://worldle.teuteuf.fr/';
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
@@ -45,6 +47,8 @@ function sendMessage(internationalDay) {
     } else {
         channel.send("Aucun événement international n'est prévu aujourd'hui.").catch(e => console.log(e));
     }
+
+    channel.send("Devine le pays du jour " + worldleURL).catch(e => console.log(e));
 }
 
 
