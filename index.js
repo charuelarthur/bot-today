@@ -3,6 +3,7 @@ const { Client, Intents } = require('discord.js');
 const fs = require("fs");
 const csv = require('csv-parser');
 const cron = require('node-cron');
+const axios = require('axios');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -11,6 +12,7 @@ client.on('ready', () => {
 
     cron.schedule('1 0 * * *', () => {
         readDay();
+        readSaintsOfTheDay();
     });
 });
 
@@ -30,11 +32,34 @@ function readDay() {
         })
         .on('end', () => {
             console.log('CSV file successfully processed at '+ new Date());
-            sendMessage(internatialDay);
+            sendMessageDay(internatialDay);
         });
 }
 
-function sendMessage(internationalDay) {
+function readSaintsOfTheDay() {
+    const date = new Date();
+
+    axios.get('https://nominis.cef.fr/json/nominis.php?jour=15&mois=11&annee=2022', {
+        params: {
+            jour: date.getDate(),
+            mois: date.getMonth()+1,
+            annee: date.getFullYear()
+        }
+    })
+        .then(response => {
+            const saintsOfTheDay = [];
+            const majeur = response.data.response.prenoms.majeur;
+            for (const key in majeur) {
+                saintsOfTheDay.push(key);
+            }
+            sendMessageSaints(saintsOfTheDay);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
+function sendMessageDay(internationalDay) {
     const channel = client.channels.cache.get(process.env.CHANNEL_ID);
 
     if (internationalDay.length > 0) {
@@ -46,6 +71,25 @@ function sendMessage(internationalDay) {
         channel.send("Aucun événement international n'est prévu aujourd'hui.").catch(e => console.log(e));
     }
 }
+
+function sendMessageSaints(saintsOfTheDay) {
+    const channel = client.channels.cache.get(process.env.CHANNEL_ID);
+    let message = "";
+    if (saintsOfTheDay.length > 0) {
+        message = "Bonne fête à ";
+        saintsOfTheDay.forEach(element => {
+            if(element === saintsOfTheDay[saintsOfTheDay.length-1]) {
+                message += element + " !";
+            } else if (element === saintsOfTheDay[saintsOfTheDay.length-2]) {
+                message += element + " et ";
+            } else {
+                message += element + ", ";
+            }
+        });
+        channel.send(message).catch(e => console.log(e));
+    }
+}
+
 
 
 
