@@ -11,6 +11,10 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 const worldleURL = 'https://worldle.teuteuf.fr/';
 
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on port ${process.env.PORT}`);
+});
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
@@ -21,10 +25,6 @@ client.on('ready', () => {
 });
 
 client.login(process.env.TOKEN);
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server listening on port ${process.env.PORT}`);
-});
 
 function readDay() {
     const internatialDay = [];
