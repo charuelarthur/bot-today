@@ -4,13 +4,19 @@ const fs = require("fs");
 const csv = require('csv-parser');
 const cron = require('node-cron');
 const axios = require('axios');
+const express = require('express');
+const app = express();
+
+app.listen(process.env.PORT, () => {
+    console.log('Server started on port '+process.env.PORT);
+});
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
-    cron.schedule('1 0 * * *', () => {
+    cron.schedule('10 8 * * *', () => {
         readDay();
         readSaintsOfTheDay();
     });
