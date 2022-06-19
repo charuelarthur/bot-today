@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6cb2ee3f-c142-41f7-8e05-db071108c929" name="Changes" comment="feat: add sending time to .env">
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="master" />
+        <option value="develop" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="29ycXOhwtkk5mlPS3VQUP8TbsrI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="16.15.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.11.38" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/package.json" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <arguments value="index.js" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cb2ee3f-c142-41f7-8e05-db071108c929" name="Changes" comment="" />
+      <created>1654088807263</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1654088807263</updated>
+      <workItem from="1654088808720" duration="5352000" />
+      <workItem from="1654155002087" duration="6982000" />
+      <workItem from="1654246116066" duration="6369000" />
+      <workItem from="1654764383026" duration="2114000" />
+      <workItem from="1655628513199" duration="2078000" />
+      <workItem from="1655647125636" duration="1633000" />
+      <workItem from="1655648802149" duration="1693000" />
+    </task>
+    <task id="LOCAL-00001" summary="set .gitignore">
+      <created>1654161265513</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1654161265513</updated>
+    </task>
+    <task id="LOCAL-00002" summary="set .gitignore">
+      <created>1654181676139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654181676139</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add ping role">
+      <created>1654181778833</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1654181778833</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: added people party">
+      <created>1655628635977</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655628635977</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: added people party">
+      <created>1655628840130</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655628840130</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: set npm start to deploy on heroku">
+      <created>1655648047062</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655648047062</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: add express server">
+      <created>1655649055791</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655649055791</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: add express server">
+      <created>1655649421784</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655649421784</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: add sending time to .env">
+      <created>1655649895015</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655649895015</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set .gitignore" />
+    <MESSAGE value="add ping role" />
+    <MESSAGE value="feat: added people party" />
+    <MESSAGE value="feat: merge master into develop to start clean devops" />
+    <MESSAGE value="feat: set npm start to deploy on heroku" />
+    <MESSAGE value="feat: add express server" />
+    <MESSAGE value="feat: add sending time to .env" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add sending time to .env" />
+  </component>
+</project>
