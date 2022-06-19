@@ -14,7 +14,7 @@ const worldleURL = 'https://worldle.teuteuf.fr/';
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
-    cron.schedule('35 16 * * *', () => {
+    cron.schedule('40 14 * * *', () => {
         readDay();
         readSaintsOfTheDay();
     });
