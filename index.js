@@ -4,6 +4,8 @@ const fs = require("fs");
 const csv = require('csv-parser');
 const cron = require('node-cron');
 const axios = require('axios');
+const express = require('express');
+const app = express();
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -12,13 +14,17 @@ const worldleURL = 'https://worldle.teuteuf.fr/';
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
-    cron.schedule('30 16 * * *', () => {
+    cron.schedule('35 16 * * *', () => {
         readDay();
         readSaintsOfTheDay();
     });
 });
 
 client.login(process.env.TOKEN);
+
+app.listen(process.env.PORT, () => {
+    console.log(`Server listening on port ${process.env.PORT}`);
+});
 
 function readDay() {
     const internatialDay = [];
