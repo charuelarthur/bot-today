@@ -4,21 +4,13 @@ const fs = require("fs");
 const csv = require('csv-parser');
 const cron = require('node-cron');
 const axios = require('axios');
-const express = require('express');
-const app = express();
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-
-const worldleURL = 'https://worldle.teuteuf.fr/';
-
-app.listen(process.env.PORT, () => {
-    console.log(`Server listening on port ${process.env.PORT}`);
-});
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
-    cron.schedule(process.env.SENDING_TIME, () => {
+    cron.schedule('1 0 * * *', () => {
         readDay();
         readSaintsOfTheDay();
     });
@@ -78,8 +70,6 @@ function sendMessageDay(internationalDay) {
     } else {
         channel.send("Aucun événement international n'est prévu aujourd'hui.").catch(e => console.log(e));
     }
-
-    channel.send("Devine le pays du jour " + worldleURL).catch(e => console.log(e));
 }
 
 function sendMessageSaints(saintsOfTheDay) {
