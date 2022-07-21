@@ -3,7 +3,7 @@ name: Daily bot run
 on:
 
   schedule:
-    - cron: 25 10 * * *
+    - cron: 00 11 * * *
 
   workflow_dispatch:
 
