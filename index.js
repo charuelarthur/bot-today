@@ -11,10 +11,6 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 
 const worldleURL = 'https://worldle.teuteuf.fr/';
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server listening on port ${process.env.PORT}`);
-});
-
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
 
@@ -96,7 +92,7 @@ function sendMessageSaints(saintsOfTheDay) {
                 message += element + ", ";
             }
         });
-        channel.send(message).catch(e => console.log(e));
+        channel.send(message).catch(e => console.log(e)).finally(()=>process.exit(0));
     }
 }
 

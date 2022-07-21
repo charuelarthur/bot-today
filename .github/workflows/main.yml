@@ -1,14 +1,20 @@
-name: Heroku Awake
+name: Daily bot run
 
 on:
+
   schedule:
-    - cron: "00 12 * * *"
+    - cron: 0 12 * * *
+
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: mikeesto/heroku-awake@1.0.0
-        with:
-          URL: "https://bot-today-rec.herokuapp.com/"
+      - uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.3.0
+      - name: Run npm install
+        run: npm i
+      - name: Run npm start
+        run: npm start
