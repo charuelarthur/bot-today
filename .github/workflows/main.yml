@@ -19,7 +19,7 @@ jobs:
       - name: Run npm start
         run: npm start
         env: 
-          TOKEN: ${{ secrets.TOKEN }}
+          TOKEN: ${{ secrets.TOKEN_DEV }}
           SENDING_TIME: ${{ secrets.SENDING_TIME_DEV }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID_DEV }}
           ROLE_ID: ${{ secrets.ROLE_ID_DEV }}
