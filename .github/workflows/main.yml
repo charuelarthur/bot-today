@@ -20,6 +20,6 @@ jobs:
         run: npm start
         env: 
           TOKEN: ${{ secrets.TOKEN }}
-          SENDING_TIME: ${{ secrets.SENDING_TIME }}
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-          ROLE_ID: ${{ secrets.ROLE_ID }}
+          SENDING_TIME: ${{ secrets.SENDING_TIME_DEV }}
+          CHANNEL_ID: ${{ secrets.CHANNEL_ID_DEV }}
+          ROLE_ID: ${{ secrets.ROLE_ID_DEV }}
