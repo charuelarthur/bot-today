@@ -24,4 +24,6 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           SENDING_TIME: ${{ secrets.SENDING_TIME }}
           CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
-          ROLE_ID: ${{ secrets.ROLE_ID }}
+          ROLE_ID: ${{ secrets.ROLE_ID }}        
+          
+          
